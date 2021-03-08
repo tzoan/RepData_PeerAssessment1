@@ -1,3 +1,5 @@
+title: PA1_template
+
 \#Reproducible Research: Assignment 1
 
 \#\#Download file and unzip data
@@ -65,8 +67,8 @@ stepsbyday<- activity %>%  # Group by day and summarize total steps across the b
 qplot(Stepsperday,data=stepsbyday,na.rm=TRUE,binwidth=500,xlab='Total steps per day', ylab='Frequency using binwith 500',main = 'Histogram of the total number of steps taken each day')
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-3-1.png)
-\#\# Mean and median steps taken each day
+![](PA1_template_files/figure-markdown_mmd/unnamed-chunk-3-1.png) \#\#
+Mean and median steps taken each day
 
 ``` r
 summary(stepsbyday)
@@ -96,7 +98,7 @@ interval_average <- activity %>%
 ggplot(interval_average,aes(interval,average))+geom_line()+labs(x="5-minute interval",y="Average steps taken across all days")
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](PA1_template_files/figure-markdown_mmd/unnamed-chunk-5-1.png)
 
 \#\#The 5-minute interval that, on average, contains the maximum number
 of steps
@@ -176,7 +178,7 @@ data
 qplot(Stepsperday,data=stepsbyday_impute,na.rm=TRUE,binwidth=500,xlab='Total steps per day', ylab='Frequency using binwith 500',main = 'Histogram of the total number of steps taken each day')
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-15-1.png)
+![](PA1_template_files/figure-markdown_mmd/unnamed-chunk-15-1.png)
 
 \#\#Mean and Median
 
@@ -211,4 +213,4 @@ meansteps <- activity_impute %>% group_by(interval,weekend) %>% summarise(averag
 ggplot(meansteps,aes(interval,average,color=weekend))+geom_line()+facet_grid(weekend~.) +xlab("Interval") + ylab("Mean of Steps") +ggtitle("Comparison of Average Number of Steps in Each Interval")
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-17-1.png)
+![](PA1_template_files/figure-markdown_mmd/unnamed-chunk-17-1.png)
