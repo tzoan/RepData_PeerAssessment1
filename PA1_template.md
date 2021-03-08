@@ -5,8 +5,6 @@ output:
     keep_md: true
 ---
 
-
-
 #Reproducible Research: Assignment 1
 
 ##Download file and unzip data
